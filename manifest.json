@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "Hjemla x Finn.no",
+  "description": "Legger til hjemla-link på finn annonser",
+  "version": "1.0",
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "hjemla.png"
+  },
+  "content_scripts": [
+    {
+      "js": ["dist/main.js"],
+      "matches": ["https://www.finn.no/realestate/homes/ad*"]
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "name": "hjemla",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/main.js",
+  "scripts": {
+    "clean": "rimraf ./dist",
+    "build": "pnpm clean && rollup -c",
+    "watch": "pnpm clean && rollup -c -w",
+    "lint": "pnpm lint:eslint && pnpm lint:prettier && pnpm lint:svelte",
+    "lint:eslint": "eslint .",
+    "lint:prettier": "prettier -c .",
+    "lint:svelte": "svelte-check --tsconfig ./tsconfig.json",
+    "format": "prettier --write ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@rollup/plugin-typescript": "11.1.5",
+    "@tsconfig/svelte": "5.0.2",
+    "@typescript-eslint/eslint-plugin": "6.9.1",
+    "@typescript-eslint/parser": "6.9.1",
+    "chrome-types": "^0.1.274",
+    "eslint": "8.53.0",
+    "eslint-config-prettier": "9.0.0",
+    "eslint-plugin-svelte": "2.35.1",
+    "prettier": "3.0.3",
+    "prettier-plugin-svelte": "3.0.3",
+    "rimraf": "^5.0.5",
+    "rollup": "^4.13.0",
+    "rollup-plugin-svelte": "7.1.6",
+    "svelte": "4.2.2",
+    "svelte-check": "3.5.2",
+    "svelte-preprocess": "5.0.4",
+    "typescript": "5.2.2",
+    "@rollup/plugin-commonjs": "^25.0.7",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "tslib": "^2.6.2"
+  },
+  "dependencies": {}
+}
